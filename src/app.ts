@@ -43,26 +43,21 @@ interface RoomServiceRequest {
 
 
 app.post('/requests', (req: Request, res: Response) => {
-    // Create a new request object from the request body
     const newRequest: RoomServiceRequest = {
-        id: uuidv4(),  // Generate a unique ID
-        guestName: req.body.guestName,  // Get guestName from the request body
-        roomNumber: req.body.roomNumber,  // Get roomNumber from the request body
-        requestDetails: req.body.requestDetails,  // Get requestDetails from the request body
-        priority: req.body.priority,  // Get priority from the request body
-        status: 'received'  // Default status is 'received'
+        id: uuidv4(),
+        guestName: req.body.guestName, 
+        roomNumber: req.body.roomNumber,  
+        requestDetails: req.body.requestDetails, 
+        priority: req.body.priority, 
+        status: 'received'  
     };
 
-    // Load the existing requests
     const requests = loadRequests();
     
-    // Add the new request to the existing list
     requests.push(newRequest);
     
-    // Save the updated list back to the file
     saveRequests(requests);
     
-    // Respond with the newly created request
     res.status(201).json(newRequest);
 });
 

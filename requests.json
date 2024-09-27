@@ -25,10 +25,10 @@
     },
     {
         "id": "d0c00ddc-13ab-4395-b32e-6ff7aeffbd24",
-        "guestName": "Rohit",
-        "roomNumber": 1000,
-        "requestDetails": "Need cold drink",
-        "priority": 6,
-        "status": "completed"
+        "guestName": "Rohit Kumar",
+        "roomNumber": 1002,
+        "requestDetails": "Need 2 veg burger",
+        "priority": 2,
+        "status": "in progress"
     }
 ]
