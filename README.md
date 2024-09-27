@@ -31,3 +31,8 @@ Follow these instructions to set up the project on your local machine.
    ```bash
    git clone https://github.com/your-username/hotel-room-service-api.git
    cd hotel-room-service-api
+
+2. **Start the Srever**:
+  ```bash
+  npx tsc
+  node dist/app.js      
